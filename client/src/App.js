@@ -1,13 +1,25 @@
 import React from "react";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import Home from "./pages/Home";
+import Resume from "./pages/Resume";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact"
 
 const App = () => (
   <div>
-    <Nav />
-    <Books />
+
+    <nav>
+  		//insert nav here:  	
+    </nav>
+
+
+    <Home />
+
+    <Resume />
+
+    <Portfolio />
+
+    <Contact />
+    
   </div>
 );
 
