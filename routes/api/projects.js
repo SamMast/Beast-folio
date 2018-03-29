@@ -3,7 +3,9 @@ const projectsController = require("../../controllers/projectsController");
 
 // Matches with "/api/projects"
 router.route("/")
-  .get(projectsController.findAll)
+  .get((req, res, next) => {
+  	next();
+   },projectsController.findAll)
   .post(projectsController.create);
 
 // Matches with "/api/projects/:id"
