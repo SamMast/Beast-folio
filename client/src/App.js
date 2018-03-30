@@ -32,7 +32,7 @@ const App = () => (
     <br />
     <br />
     <br />
-    <div className="footer" id="footer">
+    <div className="footer text-center">
          <h3>© Samuel Mast 2018</h3>
     </div>
 

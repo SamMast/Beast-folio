@@ -102,7 +102,7 @@ class PortfolioItems extends Component {
                   <div className="card-body">
                       <h4 className="card-title">{project.title}</h4>
                       <ul>{project.technologies.join(", ")}</ul>
-                      <button type="button" className="btn btn-light-blue btn-md" >Read more</button>
+                      <button type="button" className="btn btn-default btn-md" >Read more</button>
                   </div>
               </div>  
             ))}

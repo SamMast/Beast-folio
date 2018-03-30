@@ -104,7 +104,7 @@ class Contact extends Component {
           </div>
           <button 
             type="submit" 
-            className="btn btn-primary btn-lg" 
+            className="btn btn-default btn-lg" 
             style={{display:"block", margin:"auto"}}
             onClick={this.handleFormSubmit}
             >Submit Form</button>
