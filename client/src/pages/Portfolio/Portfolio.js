@@ -11,6 +11,7 @@ class PortfolioItems extends Component {
     imageUrl: "",
     githubUrl: "",
     description: "",
+    technologies: "",
     modal: false
   };
 
@@ -66,6 +67,7 @@ class PortfolioItems extends Component {
         url: this.state.url,
         imageUrl: this.state.imageUrl,
         githubUrl: this.state.githubUrl,
+        technologies: this.state.technologies,
         description: this.state.description
       })
         .then(res => this.loadPortfolio())
@@ -73,28 +75,43 @@ class PortfolioItems extends Component {
     }
   };
 
+  displayTech = tech => {
+    var display= "";
+    for (var i = 0; i < tech.length; i++) {
+      console.log(tech[i]);
+      display += `${tech[i]} \n`
+    }
+    return display
+  }
 
   render() {
     return (
-      <div>
+      <div className="portfolioPage">
         <h2 className="text-center">Portfolio</h2>
+        <hr />
         {this.state.projects.length ? (
-          <div style={{display:"block",margin:"auto"}} className="text-center">
+          <div style={{display:"block",margin:"auto",width:"80%"}} className="text-center card-deck" >
             {this.state.projects.map(project => (
-              <div key={project._id} className="work col-md-3" onClick={() => this.getDetails(project._id)}>
-                  <img className="" src={project.imageUrl} alt="work" height="250" width="250"/>
-                  <div className="">
-                    <h2 className="">{project.title}</h2>
+              <div key={project._id} className="card mb-4 work" onClick={() => this.getDetails(project._id)}>
+                  <div className="view overlay">
+                      <img className="img-fluid work-image" src={project.imageUrl} alt="Card"/>
+                      <a href="#!">
+                          <div className="mask rgba-white-slight"></div>
+                      </a>
                   </div>
-                  <br />                
-              </div>
+                  <div className="card-body">
+                      <h4 className="card-title">{project.title}</h4>
+                      <ul>{project.technologies.join(", ")}</ul>
+                      <button type="button" className="btn btn-light-blue btn-md" >Read more</button>
+                  </div>
+              </div>  
             ))}
           </div>
         ) : (
           <h4 className="text-center">No Results to Display</h4>
         )}
-          <div className="work col-md-3 text-center">
-              <img className="" src="https://png.icons8.com/metro/1600/plus.png" alt="work" height="250" width="250"/>
+          <div className="add-work col-md-3 text-center">
+              <img className="addImage" src="https://png.icons8.com/metro/1600/plus.png" alt="work" height="100" width="100"/>
               <div className="">
                 <h2 className="">Add a Project</h2>
                 <p>Admin Only</p>

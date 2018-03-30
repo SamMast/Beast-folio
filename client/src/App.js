@@ -29,7 +29,13 @@ const App = () => (
   	<hr />
   	
     <Contact />
-    
+    <br />
+    <br />
+    <br />
+    <div className="footer" id="footer">
+         <h3>© Samuel Mast 2018</h3>
+    </div>
+
   </div>
 );
 

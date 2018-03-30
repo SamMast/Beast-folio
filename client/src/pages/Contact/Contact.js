@@ -1,5 +1,14 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
+// var nodemailer = require('nodemailer');
+// var transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'samuel.a.mast@gmail.com',
+//     pass: 'hackysackr19'
+//   }
+// });
+
 
 class Contact extends Component {
   state = {
@@ -7,9 +16,6 @@ class Contact extends Component {
     email: "",
     message: ""
   };
-  // Add code to get the book with an _id equal to the id in the route param
-  // e.g. http://localhost:3000/books/:id
-  // The book id for this route can be accessed using this.props.match.params.id
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -20,8 +26,22 @@ class Contact extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    alert("Thank you for contacting Sam.  You will receive a reciept email, and Sam will be in touch with you shortly.")
-  // add code here to send message to sam, and send recipt message to user.
+    alert("Thank you for contacting Sam.\nHe will be in touch with you shortly.")
+
+    // var mailOptions = {
+    //   from: this.state.email,
+    //   to: 'samuel.a.mast@gmail.com',
+    //   subject: `${this.state.name}'s message from Portfolio`,
+    //   text: this.state.message
+    // };
+
+    // transporter.sendMail(mailOptions, function(error, info){
+    //   if (error) {
+    //     console.log(error);
+    //   } else {
+    //     console.log('Email sent: ' + info.response);
+    //   }
+    // });
 
   };
 
