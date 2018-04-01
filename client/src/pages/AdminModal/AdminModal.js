@@ -12,7 +12,8 @@ class AdminModal extends Component {
     technologies: "",
     admin: false,
     username: "",
-    password: ""
+    password: "",
+    new: true
   };
 
   componentDidMount() {
@@ -22,7 +23,7 @@ class AdminModal extends Component {
   loadPortfolio = () => {
     API.getAll()
       .then(res => {
-        this.setState({ projects: res.data, admin:false})
+        this.setState({ projects: res.data})
       })
       .catch(err => console.log(err));
   };
@@ -31,13 +32,13 @@ class AdminModal extends Component {
 
     if (id === "new") {
 
-      this.setState({ title: "Enter", url: "The", imageUrl: "New", githubUrl: "Project", description: "Here", technologies: "Info" })
+      this.setState({ title: "Enter", url: "The", imageUrl: "New", githubUrl: "Project", description: "Here", technologies: "Info", new: true })
 
     } else {
       API.getItem(id)
         .then(res => {
           console.log(res.data);
-          this.setState({ title: res.data.title, url: res.data.url, imageUrl: res.data.imageUrl, githubUrl: res.data.githubUrl, description: res.data.description, technologies: res.data.technologies })
+          this.setState({ title: res.data.title, url: res.data.url, imageUrl: res.data.imageUrl, githubUrl: res.data.githubUrl, description: res.data.description, technologies: res.data.technologies, new:false })
         })
         .catch(err => console.log(err));
     }
@@ -58,8 +59,22 @@ class AdminModal extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-
-
+    if (this.state.new) {
+      //save new item
+      API.saveItem({
+        title: this.state.title,
+        url: this.state.url,
+        imageUrl: this.state.imageUrl,
+        githubUrl: this.state.githubUrl,
+        technologies: this.state.technologies,
+        description: this.state.description
+      })
+        .then(res => this.loadPortfolio())
+        .catch(err => console.log(err));
+    } else {
+      //write logic to update item here
+      
+    }
   };
 
 
@@ -189,24 +204,28 @@ class AdminModal extends Component {
               </div>
             </div>
             <div className="row">
-              <div class="md-form">
+              <div className="md-form">
                   <textarea 
                     type="text" 
                     id="description" 
-                    class="md-textarea md-textarea-auto form-control" 
+                    className="md-textarea md-textarea-auto form-control" 
                     rows="2"
                     value={this.state.description}
                     name="description"
                     onChange={this.handleInputChange}
                   ></textarea>
-                  <label for="description" className="active">Description</label>
+                  <label htmlFor="description" className="active">Description</label>
               </div>
             </div>
             <div className="row">
-              <div class="col-auto">
+              <div className="col-auto">
                 {this.state.admin ?
-                (<button type="submit" class="btn btn-primary mb-0">Submit</button>)
-                : (<button type="submit" class="btn btn-primary mb-0 disabled">Submit</button>)
+                (<button 
+                  type="submit" 
+                  className="btn btn-primary mb-0"
+                  onClick={this.handleFormSubmit}                 
+                  >Submit</button>)
+                : (<button type="submit" className="btn btn-primary mb-0 disabled">Submit</button>)
                 }
 
               </div>

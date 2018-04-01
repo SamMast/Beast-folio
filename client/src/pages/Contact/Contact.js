@@ -48,14 +48,20 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
-        <br />
-        <hr />
+      <div id="contact">
         <h2 className="text-center">Contact Form</h2>
         <hr />
+        <br />
+        <br />
+        <br /> 
         <form className="col-md-6" style={{display:"block", margin:"auto"}}>
           <br />
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione voluptatibus maiores, incidunt ad corporis id dolore est, vero ducimus animi nemo obcaecati nam sint dolores dignissimos doloremquem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione volupta.</p>
+
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione voluptatibus maiores, incidunt ad corporis id dolore est, vero ducimus animi nemo obcaecati nam sint dolores dignissimos doloremque.</p>
+          
+          <br />
+          
           <div className="form-row">
             <div className="col-md-6">
 

@@ -69,27 +69,15 @@ class PortfolioItems extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveItem({
-        title: this.state.title,
-        url: this.state.url,
-        imageUrl: this.state.imageUrl,
-        githubUrl: this.state.githubUrl,
-        technologies: this.state.technologies,
-        description: this.state.description
-      })
-        .then(res => this.loadPortfolio())
-        .catch(err => console.log(err));
-    }
-  };
 
   render() {
     return (
-      <div className="portfolioPage">
+      <div className="portfolioPage" id="portfolio">
         <h2 className="text-center">Portfolio</h2>
         <hr />
+        <br />
+        <br />
+        <br />
         {this.state.projects.length ? (
           <div className="text-center card-deck" >
             {this.state.projects.map(project => (
@@ -102,7 +90,7 @@ class PortfolioItems extends Component {
                   </div>
                   <div className="card-body">
                       <h4 className="card-title">{project.title}</h4>
-                      <p>{project.technologies.join(", ")}</p>
+                      <p>{project.technologies}</p>
                       <button type="button" className="btn btn-default btn-md" >Read more</button>
                   </div>
               </div>  

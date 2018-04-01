@@ -3,10 +3,14 @@ import React from "react";
 
 
 const Resume = () => (
-  <div style={{clear:"both"}}>
+  <div style={{clear:"both"}} id="resume">
   	<h2 className="text-center">About Me</h2>
   	<hr />
+  	<br />
+  	<br />
+  	<br />
   	<img src="https://sammast.github.io/Responsive-Portfolio/assets/images/IMG_3302.jpg" alt="sam" style={{display:"block",margin:"auto",borderRadius:"50%",height:"25vh",width:"25vh"}} />
+  	<br />
   	<p className="text-center" style={{width:"80vh",margin:"auto"}}>I am a graduate of The University of Colorado at Boulder currently working in the Web Development field. While attending college, I studied and received my degree in Integrative Physiology. I previously worked in the Health and Life insurance field for the technology company Businessolver, and am now pursuing Full Stack web development.</p>
 	<ul className="timeline">
 	  <li className="timeline-event">
