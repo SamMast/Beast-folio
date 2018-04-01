@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import Modal from "../Modal";
+import AdminModal from "../AdminModal";
 
 class PortfolioItems extends Component {
   state = {
@@ -12,7 +13,8 @@ class PortfolioItems extends Component {
     githubUrl: "",
     description: "",
     technologies: "",
-    modal: false
+    modal: false,
+    adminModal: false
   };
 
   componentDidMount() {
@@ -52,6 +54,14 @@ class PortfolioItems extends Component {
     this.setState({modal: false})
   };
 
+  adminModalToggle = () => {
+    this.setState({adminModal: false})
+  };
+
+  editProjects = () => {
+    this.setState({modal: false, adminModal: true})
+  }
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -75,22 +85,13 @@ class PortfolioItems extends Component {
     }
   };
 
-  displayTech = tech => {
-    var display= "";
-    for (var i = 0; i < tech.length; i++) {
-      console.log(tech[i]);
-      display += `${tech[i]} \n`
-    }
-    return display
-  }
-
   render() {
     return (
       <div className="portfolioPage">
         <h2 className="text-center">Portfolio</h2>
         <hr />
         {this.state.projects.length ? (
-          <div style={{display:"block",margin:"auto",width:"80%"}} className="text-center card-deck" >
+          <div className="text-center card-deck" >
             {this.state.projects.map(project => (
               <div key={project._id} className="card mb-4 work" onClick={() => this.getDetails(project._id)}>
                   <div className="view overlay">
@@ -101,7 +102,7 @@ class PortfolioItems extends Component {
                   </div>
                   <div className="card-body">
                       <h4 className="card-title">{project.title}</h4>
-                      <ul>{project.technologies.join(", ")}</ul>
+                      <p>{project.technologies.join(", ")}</p>
                       <button type="button" className="btn btn-default btn-md" >Read more</button>
                   </div>
               </div>  
@@ -110,19 +111,24 @@ class PortfolioItems extends Component {
         ) : (
           <h4 className="text-center">No Results to Display</h4>
         )}
-          <div className="add-work col-md-3 text-center">
-              <img className="addImage" src="https://png.icons8.com/metro/1600/plus.png" alt="work" height="100" width="100"/>
+          <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)",width:"19%"}}>
+            <i className="fa fa-pencil addImage" style={{color:"#FFCC00"}}></i>
               <div className="">
-                <h2 className="">Add a Project</h2>
-                <p>Admin Only</p>
+                <h4 className="">Admin Mode</h4>
+                <p><em>Add/edit/delete projects</em></p>
               </div>
               <br />                
           </div>
 
-        {this.state.modal ? (
-          <Modal close={this.modalToggle} edit={this.editProject} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description}/>
+        {(this.state.modal && !this.state.adminModal) ? (
+          <Modal close={this.modalToggle} edit={this.editProjects} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description}/>
           ) : (<div />)
         }
+        {(!this.state.modal && this.state.adminModal) ? (
+          <AdminModal />
+          ) : (<div />)
+        }
+
       </div>
     );
   }

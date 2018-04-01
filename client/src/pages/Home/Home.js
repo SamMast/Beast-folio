@@ -39,6 +39,13 @@ class Home extends Component {
         	}
 
 
+        	<div className="contact-links">
+	        	<a href="https://www.linkedin.com/in/sammast/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+	        	<br/>
+	        	<a href="https://github.com/SamMast/" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
+	        	<br/>
+	         	<a href="mailto:samuel.a.mast@gmail.com"><i className="fa fa-envelope"></i></a>
+         	</div>
 
 			<div className="intro">
 				<h1 className="header">

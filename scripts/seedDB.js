@@ -54,7 +54,7 @@ const projectSeed = [
   },
   {
     title: "NYT Article Search",
-    url: "hhttps://sammast.github.io/NYT-Article-Search/",
+    url: "https://sammast.github.io/NYT-Article-Search/",
     imageUrl: "http://cdn.onlinewebfonts.com/svg/img_20237.png",
     githubUrl: "https://github.com/SamMast/NYT-Article-Search",
     technologies: ["HTML", "CSS", "Javascript", "jQuery", "JSON", "API/AJAX"],    

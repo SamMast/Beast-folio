@@ -1,7 +1,17 @@
 body {
   background-image: url('../images/hexbackground.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+body a:hover {
+ color: #2abbad;
+}
+
+hr {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  width: 98%;
 }
 
 .homepage {
@@ -9,7 +19,9 @@ body {
 }
 
 .intro {
-  padding: 50vh 0 0 10vh;
+  position: absolute;
+  top: 50vh;
+  left: 10vh;
   z-index: 500;
 }
 
@@ -23,10 +35,12 @@ body {
     height: 5px;
     background-color: black;
     margin: 6px 0;
+    border-radius: 2px;
 }
 
 .menu {
-  padding: 10vh 0 0 10vh;
+  top: 10vh;
+  left: 10vh;
   position: fixed;
   cursor: pointer;
   z-index: 999;
@@ -42,6 +56,7 @@ body {
   margin: 15px;
   z-index: 998;
   font-weight: bold;
+  list-style-type: none
 }
 a {
   color: black;
@@ -53,18 +68,34 @@ a.hover {
 
 .nav {
   position: fixed;
-  padding: 10vh 0 0 19vh;
+  top: 10vh;
+  left: 15vh;
 }
+
+
+.contact-links {
+  font-size: 225%;
+  position: fixed;
+  right: 11vh;
+  top: 9vh;
+}
+
 
 .work {
   float:left;
   width: 300px;
-  height: 500px;
-  margin: 50px;
+  height: 55vh;
+  margin: 3vh auto;
 }
 
-.addImage:hover {
+.addImage {
+  font-size: 200%;
+  padding-top: 10px;
+}
+
+.add-work:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .work:hover {
@@ -78,10 +109,17 @@ a.hover {
 }
 
 .add-work {
-  margin: auto;
+  margin: 3vh auto;
 }
 
-
+.card-deck {
+  display: block;
+  height: 600px;
+  width: 80%;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
 
 .links {
   font-size: 500%;
@@ -128,18 +166,20 @@ a.hover {
 
 .modal {
   text-align: center;
-  width: 60%;
-  height: 500px;
+  width: 75%;
+  height: 80%;
   left: 50%;
   top: 50%;
-  opacity: 0;
+  opacity: 1;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-color: black;
-  border-style: solid;
+  border-style: thin;
+  border-radius: 5px;
   border-width: 1px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -163,7 +203,6 @@ a.hover {
   opacity: 1;
   pointer-events: auto;
   top: 50%;
-  margin-top: -150px;
 }
 .modal[data-status="true"] .modal-left {
   -webkit-transform: translate(0, 0);
@@ -253,7 +292,7 @@ a.hover {
       -ms-flex-align: center;
           align-items: center;
   background: transparent;
-  outline: none;
+  outline: none !important;
   opacity: 0;
   -webkit-transform: translate(50px, 50px);
           transform: translate(50px, 50px);
@@ -261,57 +300,15 @@ a.hover {
   transition: all 0.45s ease-in-out 0.85s;
 }
 .modal-right .close span {
-  color: coral;
+  color: #2abbad;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   font-size: 35px;
-}
-.modal-right .close:hover span {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-.modal-right .close:active {
-  background: #b63100;
 }
 
-.modal-right .edit {
-  cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  border: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: transparent;
-  outline: none;
-  opacity: 0;
-  -webkit-transform: translate(50px, 50px);
-          transform: translate(50px, 50px);
-  -webkit-transition: all 0.45s ease-in-out 0.85s;
-  transition: all 0.45s ease-in-out 0.85s;
-}
-.modal-right .edit span {
-  color: coral;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-  font-size: 35px;
-}
-.modal-right .edit:hover span {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-.modal-right .edit:active {
+.modal-right .close:active {
   background: #b63100;
 }
 
@@ -327,6 +324,26 @@ a.hover {
     height: 300px;
     width: 300px;
 }
+
+.modalProjects {
+  overflow-y: scroll;
+  padding: 0 !important;
+  max-height: 40vh;
+}
+
+.modalProjectItems {
+  padding: 3px;
+  margin: 3px;
+  border-style: thin;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  list-style-type: none  
+}
+
+.modalProjectItems:hover {
+  cursor: pointer;
+}
+
 
 /* Variables */
 /* Fonts */
@@ -371,12 +388,12 @@ body {
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  background-color: #197970;
+  background-color: #2abbad;
 }
 .timeline-event:hover .timeline-event-thumbnail {
   -moz-box-shadow: inset 40em 0 0 0 #909090;
   -webkit-box-shadow: inset 40em 0 0 0 #909090;
-  box-shadow: inset 40em 0 0 0 #197970;
+  box-shadow: inset 40em 0 0 0 #2abbad;
 }
 
 .timeline-event-copy {
@@ -440,11 +457,12 @@ body {
 
 .footer {
   position: absolute;
-  bottom: 0px;
   margin: 0 auto;
   height: 50px;
   width: 100%;
-  background-image: linear-gradient(-135deg, transparent 50%, #197970 50%), linear-gradient(-45deg, #909090 50%, transparent 50%);
+}
+
+.decoration {
+  background-image: linear-gradient(-135deg, transparent 50%, #2abbad 50%), linear-gradient(-45deg, #909090 50%, transparent 50%);
   background-size: 50px 50px;
-  z-index: -3;
 }

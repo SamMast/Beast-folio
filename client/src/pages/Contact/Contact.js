@@ -26,7 +26,7 @@ class Contact extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    alert("Thank you for contacting Sam.\nHe will be in touch with you shortly.")
+    alert("Thank you for contacting Sam 👍\nYour message has been sent, and he will be in touch with you shortly.")
 
     // var mailOptions = {
     //   from: this.state.email,
@@ -49,7 +49,10 @@ class Contact extends Component {
   render() {
     return (
       <div>
+        <br />
+        <hr />
         <h2 className="text-center">Contact Form</h2>
+        <hr />
         <form className="col-md-6" style={{display:"block", margin:"auto"}}>
           <br />
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione voluptatibus maiores, incidunt ad corporis id dolore est, vero ducimus animi nemo obcaecati nam sint dolores dignissimos doloremque.</p>
@@ -66,7 +69,7 @@ class Contact extends Component {
                     name="name"
                     onChange={this.handleInputChange}
                     />
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name" className="active">Name</label>
                 </div>
             </div>
             <div className="col-md-6">
@@ -80,7 +83,7 @@ class Contact extends Component {
                     name="email"
                     onChange={this.handleInputChange}
                   />
-                  <label htmlFor="email">E-mail address</label>
+                  <label htmlFor="email" className="active">E-mail address</label>
                 </div>
             </div>
           </div>
@@ -98,7 +101,7 @@ class Contact extends Component {
                       onChange={this.handleInputChange}
 
                       ></textarea>
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message" className="active">Message</label>
                 </div>
             </div>
           </div>
