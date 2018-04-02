@@ -13,6 +13,38 @@ mongoose.connect(
 
 const projectSeed = [
   {
+    title: "React Memory Game",
+    url: "https://sammast.github.io/memorygame-react/",
+    imageUrl: "https://cdn.auth0.com/blog/react-js/react.png",
+    githubUrl: "https://github.com/SamMast/memorygame-react",
+    technologies: "HTML, CSS, Javascript, Node.js, Express.js, React.js",    
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
+  },
+  {
+    title: "Faux Real",
+    url: "http://faux-real.herokuapp.com/",
+    imageUrl: "https://i2.wp.com/infoguidenigeria.com/wp-content/uploads/2017/04/Newspaper.png?fit=600%2C414&ssl=1",
+    githubUrl: "https://github.com/deegiialt/Faux-Real",
+    technologies: "HTML, CSS, Javascript, Node.js, Express.js, MySQL, API/AJAX",    
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
+  },
+  {
+    title: "RPG Game",
+    url: "https://sammast.github.io/RPG-game/",
+    imageUrl: "https://lumiere-a.akamaihd.net/v1/images/starwars_551c43f4.jpeg",
+    githubUrl: "https://github.com/SamMast/RPG-game",
+    technologies: "HTML, CSS, Javascript",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
+  },
+  {
+    title: "BAMAZON Marketplace App",
+    url: "https://github.com/SamMast/Bamazon",
+    imageUrl: "http://bamazon.com.br/wp-content/uploads/2016/07/bamazon-FIN_400_green.png",
+    githubUrl: "https://github.com/SamMast/Bamazon",
+    technologies: "HTML, CSS, Javascript, jQuery, Node.js, MySQL",    
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
+  },
+  {
     title: "Hangman",
     url: "https://sammast.github.io/Hangman-Game/",
     imageUrl: "http://www.printactivities.com/Paper-Games/Hangman-Word-Game/HangmanExample.gif",
@@ -25,14 +57,6 @@ const projectSeed = [
     url: "https://sammast.github.io/Psychic-Game/",
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiltK6RTia7F7YBMpL8I01nPam3S5Yzjiu7Ok1EStWOpCcUhSvdw",
     githubUrl: "https://github.com/SamMast/Psychic-Game",
-    technologies: "HTML, CSS, Javascript",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
-  },
-  {
-    title: "RPG Game",
-    url: "https://sammast.github.io/RPG-game/",
-    imageUrl: "https://lumiere-a.akamaihd.net/v1/images/starwars_551c43f4.jpeg",
-    githubUrl: "https://github.com/SamMast/RPG-game",
     technologies: "HTML, CSS, Javascript",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
   },
@@ -93,14 +117,6 @@ const projectSeed = [
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
   },
   {
-    title: "BAMAZON Marketplace App",
-    url: "https://github.com/SamMast/Bamazon",
-    imageUrl: "http://bamazon.com.br/wp-content/uploads/2016/07/bamazon-FIN_400_green.png",
-    githubUrl: "https://github.com/SamMast/Bamazon",
-    technologies: "HTML, CSS, Javascript, jQuery, Node.js, MySQL",    
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
-  },
-  {
     title: "Friend Finder App",
     url: "https://friend-finder-43808.herokuapp.com/",
     imageUrl: "https://wallpaperbrowse.com/media/images/Best-Friends-Forever.jpg",
@@ -117,27 +133,11 @@ const projectSeed = [
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
   },
   {
-    title: "Faux Real",
-    url: "http://faux-real.herokuapp.com/",
-    imageUrl: "https://i2.wp.com/infoguidenigeria.com/wp-content/uploads/2017/04/Newspaper.png?fit=600%2C414&ssl=1",
-    githubUrl: "https://github.com/deegiialt/Faux-Real",
-    technologies: "HTML, CSS, Javascript, Node.js, Express.js, MySQL, API/AJAX",    
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
-  },
-  {
     title: "Obi-Wine Kenobi",
     url: "https://github.com/WhitPetitgout/ObiWineKenobi",
     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZb0HQC257BtF0UGYhvFZYKTbIQyBL3Ta-y9MeVmnC_8EEWkQL",
     githubUrl: "https://github.com/WhitPetitgout/ObiWineKenobi",
     technologies: "HTML, CSS, Javascript, Node.js, Local and Session storage, JSON, API/AJAX",    
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
-  },
-  {
-    title: "React Memory Game",
-    url: "https://sammast.github.io/memorygame-react/",
-    imageUrl: "https://cdn.auth0.com/blog/react-js/react.png",
-    githubUrl: "https://github.com/SamMast/memorygame-react",
-    technologies: "HTML, CSS, Javascript, Node.js, Express.js, React.js",    
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
   }
 ];

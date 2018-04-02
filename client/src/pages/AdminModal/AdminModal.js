@@ -10,6 +10,7 @@ class AdminModal extends Component {
     githubUrl: "",
     description: "",
     technologies: "",
+    id: "",
     admin: false,
     username: "",
     password: "",
@@ -38,9 +39,27 @@ class AdminModal extends Component {
       API.getItem(id)
         .then(res => {
           console.log(res.data);
-          this.setState({ title: res.data.title, url: res.data.url, imageUrl: res.data.imageUrl, githubUrl: res.data.githubUrl, description: res.data.description, technologies: res.data.technologies, new:false })
+          this.setState({ title: res.data.title, url: res.data.url, imageUrl: res.data.imageUrl, githubUrl: res.data.githubUrl, description: res.data.description, technologies: res.data.technologies, new:false, id:res.data._id })
         })
         .catch(err => console.log(err));
+    }
+  };
+
+  deleteItem = id => {
+    if (!this.state.new) {
+      alert("Deleting Project...")
+
+    // prompt user to confirm if they want to delete this item, if yes, run below
+      API.deleteItem(id)
+        .then(res => this.loadPortfolio())
+        .catch(err => console.log(err));
+
+      this.setState({ title: "", url: "", imageUrl: "", githubUrl: "", description: "", technologies: "", id:"", new: true })
+
+    } else {
+    // notify user that they must select a current item to delete
+    alert("Please Select a Project to Delete");
+
     }
   };
 
@@ -54,12 +73,17 @@ class AdminModal extends Component {
        this.setState({
         admin: true
       });     
+    } else {
+       this.setState({
+        admin: false
+      });        
     }
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.new) {
+      alert("Adding New Project ...")
       //save new item
       API.saveItem({
         title: this.state.title,
@@ -71,9 +95,23 @@ class AdminModal extends Component {
       })
         .then(res => this.loadPortfolio())
         .catch(err => console.log(err));
-    } else {
+
+      this.setState({ title: "", url: "", imageUrl: "", githubUrl: "", description: "", technologies: "", id:"", new: true })
+
+    } else if (!this.state.new) {
       //write logic to update item here
-      
+      alert("Updating Project ...");
+    //   API.updateItem(this.state.id, {
+    //     title: this.state.title,
+    //     url: this.state.url,
+    //     imageUrl: this.state.imageUrl,
+    //     githubUrl: this.state.githubUrl,
+    //     technologies: this.state.technologies,
+    //     description: this.state.description
+    //   })
+    //     .then(res => this.loadPortfolio())
+    //     .catch(err => console.log(err));      
+    // }
     }
   };
 
@@ -137,9 +175,10 @@ class AdminModal extends Component {
           </div>
         </div>
         <div className="modal-right">
-          <form style={{minWidth:"200px"}}>
+          <h4>Project Info</h4>
+          <form className="projectInfo">
             <div className="row">
-              <div className="md-form form-group">   
+              <div className="md-form form-group col">   
                 <input 
                   type="text"
                   id="title" 
@@ -152,7 +191,7 @@ class AdminModal extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="md-form form-group">   
+              <div className="md-form form-group col">   
                 <input 
                   type="text"
                   id="url" 
@@ -165,7 +204,7 @@ class AdminModal extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="md-form form-group">   
+              <div className="md-form form-group col">   
                 <input 
                   type="text"
                   id="imageUrl" 
@@ -178,7 +217,7 @@ class AdminModal extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="md-form form-group">   
+              <div className="md-form form-group col">   
                 <input 
                   type="text"
                   id="githubUrl" 
@@ -191,25 +230,26 @@ class AdminModal extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="md-form form-group">   
-                <input 
+              <div className="md-form form-group col">   
+                <textarea 
                   type="text"
                   id="technologies" 
-                  className="form-control"
+                  rows="2"
+                  className="md-textarea md-textarea-auto form-control"
                   value={this.state.technologies}
                   name="technologies"
                   onChange={this.handleInputChange}
-                />
+                ></textarea>
                 <label htmlFor="technologies" className="active">Technologies</label>
               </div>
             </div>
             <div className="row">
-              <div className="md-form">
+              <div className="md-form col">
                   <textarea 
                     type="text" 
                     id="description" 
                     className="md-textarea md-textarea-auto form-control" 
-                    rows="2"
+                    rows="3"
                     value={this.state.description}
                     name="description"
                     onChange={this.handleInputChange}
@@ -226,6 +266,17 @@ class AdminModal extends Component {
                   onClick={this.handleFormSubmit}                 
                   >Submit</button>)
                 : (<button type="submit" className="btn btn-primary mb-0 disabled">Submit</button>)
+                }
+
+              </div>
+              <div className="col-auto">
+                {this.state.admin ?
+                (<button 
+                  type="reset" 
+                  className="btn btn-danger mb-0"
+                  onClick={() => this.deleteItem(this.state.id)}                 
+                  >Delete Project</button>)
+                : (<button type="reset" className="btn btn-danger mb-0 disabled">Delete Project</button>)
                 }
 
               </div>

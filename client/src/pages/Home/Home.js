@@ -47,7 +47,7 @@ class Home extends Component {
 	         	<a href="mailto:samuel.a.mast@gmail.com"><i className="fa fa-envelope"></i></a>
          	</div>
 
-			<div className="intro">
+			<div className="intro animated slideInLeft">
 				<h1 className="header">
 					Samuel Mast
 				</h1>

@@ -29,15 +29,6 @@ class PortfolioItems extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteItem = id => {
-    // prompt user to confirm if they want to delete this item, if yes, run below
-
-
-    API.deleteItem(id)
-      .then(res => this.loadPortfolio())
-      .catch(err => console.log(err));
-  };
-
 
   //on click of the portfolio item open additional details
   getDetails = id => {

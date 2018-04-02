@@ -49,7 +49,7 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact">
-        <h2 className="text-center">Contact Form</h2>
+        <h2 className="text-center" >Contact Form</h2>
         <hr />
         <br />
         <br />
@@ -118,6 +118,12 @@ class Contact extends Component {
             onClick={this.handleFormSubmit}
             >Submit Form</button>
         </form>
+
+        <div className="footer text-center">
+            <hr />
+             <h6 style={{paddingTop:"5px"}}>© Samuel Mast 2018</h6>
+             <div className="decoration"><br/></div>
+        </div>
       </div>
     );
   }
