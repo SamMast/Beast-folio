@@ -16,13 +16,14 @@ export default {
   // Saves a item to the database
   saveItem: function(projectData) {
     return axios.post("http://localhost:3001/api/projects", projectData);
+  },
+  // Update a item to the database
+  updateItem: function(id, projectData) {
+    return axios.put("http://localhost:3001/api/projects/" + id, projectData);
   }
 };
 
 
-  // Update a item to the database
-  // updateItem: function(id, projectData) {
-  //   return axios.post("http://localhost:3001/api/projects" + id, projectData);
-  // }
+
 
   

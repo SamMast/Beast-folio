@@ -467,7 +467,12 @@ body {
   padding: 0.25em 1em 0.2em 1em;
 }
 
-#contact {
+.tech li {
+  list-style-type: none;
+}
+
+#contact,
+#techDiv {
   min-height: 100vh;
 }
 
@@ -475,7 +480,7 @@ body {
   position: absolute;
   bottom: 0;
   margin: 0 auto;
-  height: 50px;
+  height: 1vh;
   width: 100%;
 }
 

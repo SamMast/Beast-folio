@@ -49,6 +49,7 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact">
+        <hr />
         <h2 className="text-center" >Contact Form</h2>
         <hr />
         <br />

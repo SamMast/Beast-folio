@@ -64,6 +64,7 @@ class PortfolioItems extends Component {
   render() {
     return (
       <div className="portfolioPage" id="portfolio">
+        <hr />
         <h2 className="text-center">Portfolio</h2>
         <hr />
         <br />
@@ -104,7 +105,7 @@ class PortfolioItems extends Component {
           ) : (<div />)
         }
         {(!this.state.modal && this.state.adminModal) ? (
-          <AdminModal />
+          <AdminModal toggle={this.adminModalToggle}/>
           ) : (<div />)
         }
 

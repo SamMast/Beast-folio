@@ -93,7 +93,10 @@ class AdminModal extends Component {
         technologies: this.state.technologies,
         description: this.state.description
       })
-        .then(res => this.loadPortfolio())
+        .then(res => {
+          console.log(res.data);
+          this.loadPortfolio()
+        })
         .catch(err => console.log(err));
 
       this.setState({ title: "", url: "", imageUrl: "", githubUrl: "", description: "", technologies: "", id:"", new: true })
@@ -101,17 +104,20 @@ class AdminModal extends Component {
     } else if (!this.state.new) {
       //write logic to update item here
       alert("Updating Project ...");
-    //   API.updateItem(this.state.id, {
-    //     title: this.state.title,
-    //     url: this.state.url,
-    //     imageUrl: this.state.imageUrl,
-    //     githubUrl: this.state.githubUrl,
-    //     technologies: this.state.technologies,
-    //     description: this.state.description
-    //   })
-    //     .then(res => this.loadPortfolio())
-    //     .catch(err => console.log(err));      
-    // }
+      API.updateItem(this.state.id, {
+        title: this.state.title,
+        url: this.state.url,
+        imageUrl: this.state.imageUrl,
+        githubUrl: this.state.githubUrl,
+        technologies: this.state.technologies,
+        description: this.state.description
+      })
+        .then(res => {
+          console.log(res.data);
+          this.loadPortfolio();
+        })
+        .catch(err => console.log(err));      
+  
     }
   };
 
@@ -119,7 +125,7 @@ class AdminModal extends Component {
   render() {
     return (
       <div className="modal"  data-status="true">
-        <div className="modal-left" style={{padding:"3vh"}}>
+        <div className="modal-left" style={{padding:"3vh",overflowY:"scroll"}}>
           <h2 className="text-center">Admin Mode</h2>
           <br />
           <p><em>must enter admin Username and Password to submit changes</em></p>
@@ -285,7 +291,7 @@ class AdminModal extends Component {
           <br />
 
           <div className="close">
-          <a onClick={this.close}>
+          <a onClick={() => this.props.toggle(false)}>
             <span className="fa fa-close"></span>
           </a>
           </div>

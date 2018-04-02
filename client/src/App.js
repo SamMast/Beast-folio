@@ -2,16 +2,17 @@ import React from "react";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact";
+import Technologies from "./pages/Technologies";
+
 
 //version with 1 footer
 const App = () => (
   <div>
   	<Home />
-    <hr />
     <Resume />
     <br />
-    <hr />
+    <Technologies />
     <Portfolio />
     <br />
     <br />
