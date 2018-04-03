@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const projectsController = require("../../controllers/projectsController");
 
-const api_key = "" //process.env.api_key;
-const domain = 'sandboxbf6265c3f8f643859c89ec1532ab6d75.mailgun.org';
-const mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+// const api_key = "" //process.env.api_key;
+// const domain = 'sandboxbf6265c3f8f643859c89ec1532ab6d75.mailgun.org';
+// const mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
 
 // Matches with "/api/projects"
