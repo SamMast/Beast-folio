@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "../components/Footer";
 
 
 const Technologies = props => (
@@ -32,6 +32,7 @@ const Technologies = props => (
       </ul>
     </div>
     <div style={{clear:"both"}}></div>
+    <Footer />
   </div>
 );
 

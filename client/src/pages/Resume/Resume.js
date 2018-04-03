@@ -1,5 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 
 const Resume = () => (
@@ -90,6 +91,7 @@ const Resume = () => (
 	    </div>
 	  </li>
 	</ul>  
+    <Footer />
   </div>
 );
 

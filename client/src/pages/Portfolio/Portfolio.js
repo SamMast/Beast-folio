@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Modal from "../components/Modal";
 import AdminModal from "../components/AdminModal";
+import Footer from "../components/Footer";
 
 class PortfolioItems extends Component {
   state = {
@@ -108,7 +109,8 @@ class PortfolioItems extends Component {
           <AdminModal toggle={this.adminModalToggle}/>
           ) : (<div />)
         }
-
+        
+        <Footer />
       </div>
     );
   }
