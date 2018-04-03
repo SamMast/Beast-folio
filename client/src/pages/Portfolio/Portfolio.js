@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import API from "../../utils/API";
+import Nav from "../components/Nav";
 import Modal from "../components/Modal";
 import AdminModal from "../components/AdminModal";
 import Footer from "../components/Footer";
@@ -68,8 +69,7 @@ class PortfolioItems extends Component {
         <hr />
         <h2 className="text-center">Portfolio</h2>
         <hr />
-        <br />
-        <br />
+        <Nav />
         <br />
         {this.state.projects.length ? (
           <div className="text-center card-deck" >
@@ -92,6 +92,8 @@ class PortfolioItems extends Component {
         ) : (
           <h4 className="text-center">No Results to Display</h4>
         )}
+        <span ><img src="http://cdn.onlinewebfonts.com/svg/img_440772.png" alt="scroll" style={{display:"block",margin:"auto",height:"50px",width:"100px"}}/></span>
+
           <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)",width:"19%"}}>
             <i className="fa fa-pencil addImage" style={{color:"#FFCC00"}}></i>
               <div className="">

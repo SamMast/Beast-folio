@@ -2,7 +2,7 @@ html {
   position: relative;
 }
 
-body {
+.homepage {
   background-image: url('../images/hexbackground.jpg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -77,6 +77,9 @@ a.hover {
   left: 15vh;
 }
 
+h2 {
+}
+
 
 .contact-links {
   font-size: 225%;
@@ -119,11 +122,11 @@ a.hover {
 
 .card-deck {
   display: block;
-  height: 600px;
+  height: 62vh;
   width: 80%;
   margin: auto;
   overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .links {

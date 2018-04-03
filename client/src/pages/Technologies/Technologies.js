@@ -1,4 +1,5 @@
 import React from "react";
+import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 
@@ -7,6 +8,7 @@ const Technologies = props => (
     <hr />
     <h2 className="text-center" >Technologies</h2>
     <hr />
+    <Nav />
     <br />
     <br />
     <br />

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import API from "../../utils/API";
 
@@ -49,6 +50,7 @@ class Contact extends Component {
         <hr />
         <h2 className="text-center" >Contact Form</h2>
         <hr />
+        <Nav />
         <br />
         <br />
         <br /> 
@@ -116,6 +118,13 @@ class Contact extends Component {
             onClick={this.handleFormSubmit}
             >Submit Form</button>
         </form>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Footer />
       </div>
     );

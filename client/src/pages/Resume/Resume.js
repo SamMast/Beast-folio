@@ -1,5 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 
@@ -8,6 +9,7 @@ const Resume = () => (
   	<hr />
   	<h2 className="text-center">About Me</h2>
   	<hr />
+  	<Nav />
   	<br />
   	<br />
   	<br />
