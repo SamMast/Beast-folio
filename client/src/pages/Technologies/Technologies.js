@@ -17,7 +17,7 @@ const Technologies = props => (
         <li className="col-md-3">JavaScript<br /><img src="http://www.unixstickers.com/image/data/stickers/js/js.sh.png" alt="js" /></li>
         <li className="col-md-3">jQuery<br /><img src="http://www.unixstickers.com/image/cache/data/stickers/jquery/jquery_bumper.sh-600x600.png" alt="jquery" /></li>
         <li className="col-md-3">JSON<br /><img src="http://www.unixstickers.com/image/cache/data/stickers/json/json_bumper.sh-600x600.png" alt="json" /></li>
-        <li className="col-md-3">Ajax<br /><img src="http://www.codespud.com/wp-content/uploads/2016/08/AJAX_logo_by_gengns.svg_-750x400.png" alt="ajax" /></li>
+        <li className="col-md-3">Ajax<br /><img src="https://qph.fs.quoracdn.net/main-qimg-f66afd1b8305c03c5d019db5d5432aa5" alt="ajax" /></li>
         <li className="col-md-3">Firebase<br /><img src="https://firebase.google.com/_static/images/firebase/touchicon-180.png" alt="firebase" /></li>
         <li className="col-md-3">Node.js<br /><img src="http://pluspng.com/img-png/nodejs-logo-vector-png-1-49-2-98-375.png" alt="node" /></li>
         <li className="col-md-3">Handlebars.js<br /><img src="https://i0.wp.com/blog.fossasia.org/wp-content/uploads/2017/07/handlebars-js.png?fit=500%2C500&ssl=1" alt="handlebars" /></li>

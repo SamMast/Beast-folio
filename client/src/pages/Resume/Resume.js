@@ -22,7 +22,7 @@ const Resume = () => (
 	      <p className="timeline-event-thumbnail">2018</p>
 	      <h3>University of Denver Coding Bootcamp</h3>
 	      <h4>Student</h4>
-	      <p><strong>Info</strong><br/>Intensive Full Stack Web Development bootcamp where we covered HTML5, CSS3, JavaScript/jQuery, Node.jd, MongoDB, MySQL, Express.js, React.js, and PHP.</p>
+	      <p><strong>Info</strong><br/>Intensive Full Stack Web Development bootcamp where we covered HTML5, CSS3, JavaScript/jQuery, AJAX, JSON, Node.js, MongoDB, MySQL, Express.js, React.js, and PHP.</p>
 	      <p>This is where I honed my Web Development craft</p>
 	    </div>
 	  </li>
@@ -33,7 +33,7 @@ const Resume = () => (
 	      <h3>Businessolver</h3>
 	      <h4>System Relationship Manager</h4>
 	      <p><strong>Info</strong><br/>A tech company in the Insurance Field which provides system-as-as-service platform to manage human resources.</p>
-	      <div><strong>Responsibilities</strong><br/>
+	      <div><strong>Accomplishments</strong><br/>
 	      	<ul>
 	      		<li>Responsible for systems management to meet business objectives and track progress to ensure timely and accurate completion of key milestones for daily and long term client tasks</li>
 	      		<li>Mitigated risk by attention to detail in creating process documentation for High profile clients</li>
@@ -49,7 +49,7 @@ const Resume = () => (
 	      <p className="timeline-event-thumbnail">2013 - 2014</p>
 	      <h3>StudySync</h3>
 	      <h4>Marketing Research Intern</h4>
-	      <div><strong>Responsibilities</strong><br/>
+	      <div><strong>Accomplishments</strong><br/>
 	      	<ul>
 	      		<li>Supported Director of Educational Partnership through data collection to advance educational data technology in schools</li>	      
 	      		<li>Conducted research and successfully gathered leads on potential partnerships for implementation in domestic and international school districts</li>
@@ -63,7 +63,12 @@ const Resume = () => (
 	      <p className="timeline-event-thumbnail">2007 - 2012</p>
 	      <h3>University of Colorado at Boulder</h3>
 	      <h4>Student</h4>
-	      <p><strong>Info</strong><br/>B.A. Integrative Physiology, National Society of Leaderhsip and Success, 4-year Golden Buffalo Marching Band memner (drumline)</p>
+	      <div><strong>Accomplishments</strong></div>
+	      	<ul>
+		      	<li>B.A. Integrative Physiology</li> 
+		      	<li>National Society of Leaderhsip and Success</li> 
+		      	<li>4-year Golden Buffalo Marching Band member (drumline)</li>
+	      	</ul>
 	    </div>
 	  </li>
 	  <li className="timeline-event">
@@ -72,8 +77,7 @@ const Resume = () => (
 	      <p className="timeline-event-thumbnail">2007 - 2013</p>
 	      <h3>Air Academy High School Bands</h3>
 	      <h4>Lead Percussion Instructor</h4>
-	      <p><strong>Text</strong><br/>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.</p>
-	      <div><strong>Responsibilities</strong><br/>
+	      <div><strong>Accomplishments</strong><br/>
 	      	<ul>
 	      		<li>Facilitated the achievement of 1st place trophies in the CBA State Marching Band Competition for 6 straight years</li>
 	      		<li>Developed and directed weekly practices for high school music students</li>	      
