@@ -7,12 +7,16 @@ const Modal = props => (
     <div className="modal-left" style={{backgroundImage:`url(${props.imageUrl})`,backgroundSize:"fill"}}>
     </div>
     <div className="modal-right">
+      <h1>{props.title}</h1>
+      <br />
+      <p><strong>Links:</strong></p>
       <div className="row">
         <a href={props.url} target="_blank"><span className="fa fa-link links"></span></a>
         <a href={props.githubUrl} target="_blank"><span className="fa fa-github links"></span></a>
       </div>
-      <h2>{props.title}</h2>
-      <br/>
+      <br />
+      <p><strong>Technologies:</strong> {props.tech}</p>
+      <br />
       <p><strong>Description:</strong> {props.description}</p>
       <div className="close">
       <a onClick={props.close}>

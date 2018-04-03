@@ -14,8 +14,10 @@ const Resume = () => (
   	<br />
   	<p className="text-center col-md-6" style={{margin:"auto"}}>I am a graduate of The University of Colorado at Boulder and University of Denver, currently working in the Web Development field. While attending CU Boulder, I studied and received my degree in Integrative Physiology. I previously worked for a tech company in the Health and Life insurance field, and after graduating from the University of Denver I am now pursuing Full Stack Web Development.</p>
   	<br />
-  	<h4 className="text-center">Resume</h4>
 	<ul className="timeline">
+  	<h4 className="text-center" style={{textDecoration:"underline"}}>Resume:</h4>
+  	<br />
+  	<br />
 	  <li className="timeline-event">
 	    <label className="timeline-event-icon"></label>
 	    <div className="timeline-event-copy">

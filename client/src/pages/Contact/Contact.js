@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Footer from "../components/Footer";
 
 // var nodemailer = require('nodemailer');
 // var transporter = nodemailer.createTransport({
@@ -119,12 +120,7 @@ class Contact extends Component {
             onClick={this.handleFormSubmit}
             >Submit Form</button>
         </form>
-
-        <div className="footer text-center">
-            <hr />
-             <h6 style={{paddingTop:"5px"}}>© Samuel Mast 2018</h6>
-             <div className="decoration"><br/></div>
-        </div>
+        <Footer />
       </div>
     );
   }

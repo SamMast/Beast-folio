@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import API from "../../utils/API";
-import Modal from "../Modal";
-import AdminModal from "../AdminModal";
+import Modal from "../components/Modal";
+import AdminModal from "../components/AdminModal";
 
 class PortfolioItems extends Component {
   state = {
@@ -24,7 +24,7 @@ class PortfolioItems extends Component {
   loadPortfolio = () => {
     API.getAll()
       .then(res => {
-        this.setState({ projects: res.data, title: "", url: "", imageUrl: "", githubUrl: "", description: "" })
+        this.setState({ projects: res.data, title: "", url: "", imageUrl: "", githubUrl: "", description: "", technologies: "" })
       })
       .catch(err => console.log(err));
   };
@@ -36,7 +36,7 @@ class PortfolioItems extends Component {
     API.getItem(id)
       .then(res => {
         console.log(res.data);
-        this.setState({ title: res.data.title, url: res.data.url, imageUrl: res.data.imageUrl, githubUrl: res.data.githubUrl, description: res.data.description, modal:true })
+        this.setState({ title: res.data.title, url: res.data.url, imageUrl: res.data.imageUrl, githubUrl: res.data.githubUrl, description: res.data.description, technologies: res.data.technologies, modal:true })
       })
       .catch(err => console.log(err));
   };
@@ -101,7 +101,7 @@ class PortfolioItems extends Component {
           </div>
 
         {(this.state.modal && !this.state.adminModal) ? (
-          <Modal close={this.modalToggle} edit={this.editProjects} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description}/>
+          <Modal close={this.modalToggle} edit={this.editProjects} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description} tech={this.state.technologies}/>
           ) : (<div />)
         }
         {(!this.state.modal && this.state.adminModal) ? (

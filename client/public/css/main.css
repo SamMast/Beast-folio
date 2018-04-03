@@ -386,10 +386,10 @@ body {
   content: '';
   margin-left: -1px;
   position: absolute;
-  top: 0;
+  top: 5em;
   left: 2em;
   width: 2px;
-  height: 100%;
+  height: 93%;
 }
 
 .timeline-event {

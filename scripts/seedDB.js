@@ -41,7 +41,7 @@ const projectSeed = [
     url: "https://github.com/SamMast/Bamazon",
     imageUrl: "http://bamazon.com.br/wp-content/uploads/2016/07/bamazon-FIN_400_green.png",
     githubUrl: "https://github.com/SamMast/Bamazon",
-    technologies: "HTML, CSS, Javascript, jQuery, Node.js, MySQL",    
+    technologies: "Javascript, jQuery, Node.js, MySQL",    
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi odio officiis autem qui, delectus sint facilis velit quis assumenda alias, molestias natus voluptatibus deleniti facere ut illum quaerat nostrum!"
   },
   {

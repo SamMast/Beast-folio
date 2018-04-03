@@ -6,7 +6,8 @@ const projectSchema = new Schema({
   url: { type: String, required: true },
   imageUrl: { type: String, required: true },
   githubUrl: { type: String, required: true },
-  description: String
+  description: String,
+  technologies: String
 });
 
 const Project = mongoose.model("Project", projectSchema);

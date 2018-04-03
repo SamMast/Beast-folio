@@ -10,6 +10,7 @@ const Technologies = props => (
     <br />
     <br />
     <br />
+    <br />
     <div className="text-center tech container">
       <ul className="techList row">
         <li className="col-md-3">HTML5<br /><img src="http://www.unixstickers.com/image/cache/data/stickers/html5/html5_bumper.sh-600x600.png" alt="html" /></li>

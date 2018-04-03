@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
+import API from "../../../utils/API";
 
 class AdminModal extends Component {
   state = {
@@ -236,17 +236,17 @@ class AdminModal extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="md-form form-group col">   
-                <textarea 
-                  type="text"
-                  id="technologies" 
-                  rows="2"
-                  className="md-textarea md-textarea-auto form-control"
-                  value={this.state.technologies}
-                  name="technologies"
-                  onChange={this.handleInputChange}
-                ></textarea>
-                <label htmlFor="technologies" className="active">Technologies</label>
+              <div className="md-form col">
+                  <textarea 
+                    type="text" 
+                    id="technologies" 
+                    className="md-textarea md-textarea-auto form-control" 
+                    rows="3"
+                    value={this.state.technologies}
+                    name="technologies"
+                    onChange={this.handleInputChange}
+                  ></textarea>
+                  <label htmlFor="technologies" className="active">Technologies</label>
               </div>
             </div>
             <div className="row">
