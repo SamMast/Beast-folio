@@ -75,7 +75,7 @@ class PortfolioItems extends Component {
         <br />
         <div className="port">
           {this.state.projects.length ? (
-            <div className="text-center card-deck" >
+            <div className="text-center card-deck fadeIn" >
               {this.state.projects.map(project => (
                 <div key={project._id} className="card mb-4 work" onClick={() => this.getDetails(project._id)}>
                     <div className="view overlay">
@@ -93,7 +93,7 @@ class PortfolioItems extends Component {
               ))}
             </div>
           ) : (
-            <h4 className="text-center">No Results to Display</h4>
+            <h4 className="text-center">Loading Projects...</h4>
           )}
           <div className="text-center">
             <img src="http://cdn.onlinewebfonts.com/svg/img_440772.png" alt="scroll for more" style={{display:"block",margin:"auto",height:"50px",width:"100px"}}/>

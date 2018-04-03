@@ -57,7 +57,7 @@ class Contact extends Component {
         <br />
         <br />
         <div className="cont">
-          <form className="col-md-6 contactForm" style={{display:"block", margin:"auto"}}>
+          <form className="col-md-6 contactForm fadeIn" style={{display:"block", margin:"auto"}}>
             <br />
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione voluptatibus maiores, incidunt ad corporis id dolore est, vero ducimus animi nemo obcaecati nam sint dolores dignissimos doloremquem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione volupta.</p>
 

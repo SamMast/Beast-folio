@@ -15,7 +15,7 @@ const Technologies = props => (
     <br />
     <br />
     <br />
-    <div className="text-center tech container">
+    <div className="text-center tech container fadeIn">
       <ul className="techList row">
         <li className="col-md-3">HTML5<br /><img src="https://www.unixstickers.com/image/cache/data/stickers/html5/html5_bumper.sh-600x600.png" alt="html" /></li>
         <li className="col-md-3">CSS3<br /><img src="https://www.unixstickers.com/image/cache/data/stickers/css3/css3-600x600.png" alt="css" /></li>

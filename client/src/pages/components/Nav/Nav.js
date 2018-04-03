@@ -19,7 +19,7 @@ class Nav extends Component {
   render() {
     return (
       <div>
-        <div className="menu" onClick ={this.menuToggle}>
+        <div className="menu pulse" onClick ={this.menuToggle}>
           <div className="hamburger"></div>
           <div className="hamburger"></div>
           <div className="hamburger"></div>
@@ -39,7 +39,7 @@ class Nav extends Component {
         }
 
 
-        <div className="contact-links">
+        <div className="contact-links pulse">
           <a href="https://www.linkedin.com/in/sammast/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
           <br/>
           <a href="https://github.com/SamMast/" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>

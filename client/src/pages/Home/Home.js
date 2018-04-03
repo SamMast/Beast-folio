@@ -9,7 +9,7 @@ class Home extends Component {
 		<div className="homepage">
 			<Nav />
 
-			<div className="intro animated slideInLeft">
+			<div className="intro slideLeft">
 				<h1 className="header">
 					Samuel Mast
 				</h1>
