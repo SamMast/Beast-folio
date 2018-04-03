@@ -66,53 +66,61 @@ class PortfolioItems extends Component {
   render() {
     return (
       <div className="portfolioPage" id="portfolio">
-        <hr />
-        <h2 className="text-center">Portfolio</h2>
-        <hr />
+        <div className="pageHeader">
+          <hr />
+          <h2 className="text-center">Portfolio</h2>
+          <hr />
+        </div>
         <Nav />
         <br />
-        {this.state.projects.length ? (
-          <div className="text-center card-deck" >
-            {this.state.projects.map(project => (
-              <div key={project._id} className="card mb-4 work" onClick={() => this.getDetails(project._id)}>
-                  <div className="view overlay">
-                      <img className="img-fluid work-image" src={project.imageUrl} alt="Card"/>
-                      <a href="#!">
-                          <div className="mask rgba-white-slight"></div>
-                      </a>
-                  </div>
-                  <div className="card-body">
-                      <h4 className="card-title">{project.title}</h4>
-                      <p>{project.technologies}</p>
-                      <button type="button" className="btn btn-default btn-md" >Read more</button>
-                  </div>
-              </div>  
-            ))}
-          </div>
-        ) : (
-          <h4 className="text-center">No Results to Display</h4>
-        )}
-        <span ><img src="http://cdn.onlinewebfonts.com/svg/img_440772.png" alt="scroll" style={{display:"block",margin:"auto",height:"50px",width:"100px"}}/></span>
-
-          <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)",width:"19%"}}>
-            <i className="fa fa-pencil addImage" style={{color:"#FFCC00"}}></i>
-              <div className="">
-                <h4 className="">Admin Mode</h4>
-                <p><em>Add/edit/delete projects</em></p>
-              </div>
-              <br />                
+        <div className="port">
+          {this.state.projects.length ? (
+            <div className="text-center card-deck" >
+              {this.state.projects.map(project => (
+                <div key={project._id} className="card mb-4 work" onClick={() => this.getDetails(project._id)}>
+                    <div className="view overlay">
+                        <img className="img-fluid work-image" src={project.imageUrl} alt="Card"/>
+                        <a href="#!">
+                            <div className="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <div className="card-body">
+                        <h4 className="card-title">{project.title}</h4>
+                        <p>{project.technologies}</p>
+                        <button type="button" className="btn btn-default btn-md" >Read more</button>
+                    </div>
+                </div>  
+              ))}
+            </div>
+          ) : (
+            <h4 className="text-center">No Results to Display</h4>
+          )}
+          <div className="text-center">
+            <img src="http://cdn.onlinewebfonts.com/svg/img_440772.png" alt="scroll for more" style={{display:"block",margin:"auto",height:"50px",width:"100px"}}/>
+            <br />
+            <em>scroll for more projects</em>
           </div>
 
-        {(this.state.modal && !this.state.adminModal) ? (
-          <Modal close={this.modalToggle} edit={this.editProjects} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description} tech={this.state.technologies}/>
-          ) : (<div />)
-        }
-        {(!this.state.modal && this.state.adminModal) ? (
-          <AdminModal toggle={this.adminModalToggle}/>
-          ) : (<div />)
-        }
-        
-        <Footer />
+            <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)",width:"19%"}}>
+              <i className="fa fa-pencil addImage" style={{color:"#FFCC00"}}></i>
+                <div className="">
+                  <h4 className="">Admin Mode</h4>
+                  <p><em>Add/edit/delete projects</em></p>
+                </div>
+                <br />                
+            </div>
+
+          {(this.state.modal && !this.state.adminModal) ? (
+            <Modal close={this.modalToggle} edit={this.editProjects} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description} tech={this.state.technologies}/>
+            ) : (<div />)
+          }
+          {(!this.state.modal && this.state.adminModal) ? (
+            <AdminModal toggle={this.adminModalToggle}/>
+            ) : (<div />)
+          }
+          
+          <Footer />
+        </div>
       </div>
     );
   }

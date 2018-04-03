@@ -5,9 +5,11 @@ import Footer from "../components/Footer";
 
 const Technologies = props => (
   <div id="techDiv">
-    <hr />
-    <h2 className="text-center" >Technologies</h2>
-    <hr />
+    <div className="pageHeader">
+      <hr />
+      <h2 className="text-center" >Technologies</h2>
+      <hr />
+    </div>
     <Nav />
     <br />
     <br />

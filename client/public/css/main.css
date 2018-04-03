@@ -77,12 +77,19 @@ a.hover {
   left: 15vh;
 }
 
-h2 {
+.pageHeader {
+  background color: white;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: fixed;
+  min-width: 100%
 }
 
 
 .contact-links {
   font-size: 225%;
+  display:block;
   position: fixed;
   right: 11vh;
   top: 9vh;
@@ -359,6 +366,9 @@ h2 {
   cursor: pointer;
 }
 
+.resumeScroll {
+  margin-top: 35vh;
+}
 
 /* Variables */
 /* Fonts */
@@ -482,8 +492,17 @@ body {
 }
 
 .tech img {
-  height:200px;
-  width: 200px;
+  height: 19vh;
+  width: 19vh;
+}
+
+.tech,
+.cont {
+  margin-top: 10vh;
+}
+
+.port {
+  margin-top: 15vh;
 }
 
 #contact,
