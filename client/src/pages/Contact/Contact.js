@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer";
-
-// var nodemailer = require('nodemailer');
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: 'samuel.a.mast@gmail.com',
-//     pass: 'hackysackr19'
-//   }
-// });
-
+import API from "../../utils/API";
 
 class Contact extends Component {
   state = {
@@ -27,23 +18,28 @@ class Contact extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    alert("Thank you for contacting Sam 👍\nYour message has been sent, and he will be in touch with you shortly.")
 
-    // var mailOptions = {
-    //   from: this.state.email,
-    //   to: 'samuel.a.mast@gmail.com',
-    //   subject: `${this.state.name}'s message from Portfolio`,
-    //   text: this.state.message
-    // };
+    //Add send email code here
+    API.sendMail({
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    })
+      .then(res =>{
+        console.log(res.data)
+        if(res.data){
+          alert("Thank you for contacting Sam 👍\nYour message has been sent, and he will be in touch with you shortly.")
 
-    // transporter.sendMail(mailOptions, function(error, info){
-    //   if (error) {
-    //     console.log(error);
-    //   } else {
-    //     console.log('Email sent: ' + info.response);
-    //   }
-    // });
+        }
+    })
+      .catch(err => console.log(err));
 
+
+
+
+
+    this.setState({ name: "", email: "", message: "" })
+  
   };
 
 

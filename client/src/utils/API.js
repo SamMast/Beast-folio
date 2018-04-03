@@ -20,7 +20,12 @@ export default {
   // Update a item to the database
   updateItem: function(id, projectData) {
     return axios.put("/api/projects/" + id, projectData);
+  },
+  // send mail
+  sendMail: function(mailData) {
+    return axios.post("/api/projects/sumbitmail", mailData);
   }
+
 };
 
 

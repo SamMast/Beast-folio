@@ -24,6 +24,7 @@
     "cors": "^2.8.4",
     "dns": "^0.2.2",
     "express": "^4.15.4",
+    "mailgun-js": "^0.16.0",
     "mongoose": "^4.11.7",
     "nodemailer": "^4.6.4",
     "react-router-dom": "^4.2.2"
