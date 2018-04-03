@@ -19,7 +19,7 @@ const Resume = () => (
   		<img className="zoomer" src="https://sammast.github.io/Responsive-Portfolio/assets/images/IMG_3302.jpg" alt="sam" style={{display:"block",margin:"auto",borderRadius:"50%",height:"25vh",width:"25vh",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)"}} />
   	</div>
   	<div className="resumeScroll">
-	  	<p className="text-center col-md-6 fadeIn" style={{margin:"auto"}}>I am a graduate of The University of Colorado at Boulder and University of Denver, currently working in the Web Development field. While attending CU Boulder, I studied and received my degree in Integrative Physiology. I previously worked for a tech company in the Health and Life insurance field, and after graduating from the University of Denver I am now pursuing Full Stack Web Development.</p>
+	  	<p className="text-center col-md-6 fadeIn" style={{margin:"auto"}}>I am a graduate of The University of Colorado at Boulder and University of Denver, currently working in the Web Development field. While attending CU Boulder, I studied and received my degree in Integrative Physiology. I previously worked for a tech company in the Health and Life insurance field, and after graduating from the University of Denver Coding Bootcamp I am now pursuing Web Development.</p>
 	  	<br />
 		<ul className="timeline fadeIn">
 	  	<h4 className="text-center" style={{textDecoration:"underline"}}>Resume:</h4>
