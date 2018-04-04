@@ -26,7 +26,7 @@ class Nav extends Component {
         </div>
 
         {this.state.menuOpen ? (
-          <div className="nav" >
+          <div className="nav" style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:997}}>
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
@@ -35,7 +35,16 @@ class Nav extends Component {
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
-          ) : (<div className="nav" />)
+          ) : (
+          <div className="nav" style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:997}}>
+            <ul>
+              <li style={{opacity:0}}><a href="/">Home</a></li>
+              <li style={{opacity:0}}><a href="/about">About</a></li>
+              <li style={{opacity:0}}><a href="/technology">Technologies</a></li>
+              <li style={{opacity:0}}><a href="/portfolio">Portfolio</a></li>
+              <li style={{opacity:0}}><a href="/contact">Contact</a></li>
+            </ul>
+          </div>)
         }
 
         <div className="contact-links pulse">

@@ -20,26 +20,26 @@ class Contact extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
 
-    //Add send email code here
-    API.sendMail({
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
-    })
-      .then(res =>{
-        console.log(res.data)
-        if(res.data){
-          alert("Thank you for contacting Sam 👍\nYour message has been sent, and he will be in touch with you shortly.")
+    if (this.state.name !== "" && this.state.email !== "" && this.state.message !=="") {
+      //Add send email code here
+      API.sendMail({
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
+      })
+        .then(res =>{
+          console.log(res.data)
+          if(res.data){
+            alert("Thank you for contacting Sam 👍\nYour message has been sent, and he will be in touch with you shortly.")
 
-        }
-    })
-      .catch(err => console.log(err));
+          }
+      })
+        .catch(err => console.log(err));
 
-
-
-
-
-    this.setState({ name: "", email: "", message: "" })
+      this.setState({ name: "", email: "", message: "" })
+    } else {
+      alert("Please ensure all fields are completed before submitting form")
+    }
   
   };
 
@@ -71,6 +71,7 @@ class Contact extends Component {
                   <div className="md-form form-group">
                     <i className="fa fa-user prefix"></i>
                     <input 
+                      required 
                       type="text" 
                       id="name" 
                       className="form-control"
@@ -85,6 +86,7 @@ class Contact extends Component {
                   <div className="md-form form-group">   
                     <i className="fa fa-envelope prefix"></i>
                     <input 
+                      required 
                       type="email"
                       id="email" 
                       className="form-control"
@@ -100,7 +102,8 @@ class Contact extends Component {
               <div className="col-md-12">
                   <div className="md-form form-group">
                       <i className="fa fa-pencil prefix"></i>
-                      <textarea 
+                      <textarea
+                        required 
                         type="text" 
                         id="message" 
                         className="form-control md-textarea" 

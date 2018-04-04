@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 const Resume = () => (
   <div style={{clear:"both"}} id="resume">
     <div  style={{backgroundColor:"white",opacity:1,zIndex:998}}>
-	    <div className="pageHeader" style={{backgroundColor:"white",opacity:1,zIndex:888}}>
+	    <div className="pageHeader" style={{backgroundColor:"white",opacity:1,zIndex:998}}>
 	      <hr />
 	      <h2 className="text-center" >About Me</h2>
 	      <hr />
@@ -16,7 +16,7 @@ const Resume = () => (
 	  	<br />
 	  	<br />
 	  	<br />
-	  	<div style={{position:"fixed",top:"15%",minWidth:"100%",backgroundColor:"white",opacity:1,zIndex:998}}>
+	  	<div style={{position:"fixed",top:"17%",minWidth:"100%",backgroundColor:"white",opacity:1,zIndex:998}}>
 	  		<img className="zoomer" src="https://sammast.github.io/Responsive-Portfolio/assets/images/IMG_3302.jpg" alt="sam" style={{display:"block",margin:"auto",borderRadius:"50%",height:"25vh",width:"25vh",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)"}} />
 	  	</div>
   	</div>
