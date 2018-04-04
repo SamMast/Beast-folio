@@ -47,7 +47,7 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact">
-        <div className="pageHeader">
+        <div className="pageHeader" style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:998}}>
           <hr />
           <h2 className="text-center" >Contact Form</h2>
           <hr />

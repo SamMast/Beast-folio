@@ -4,7 +4,7 @@ html {
 
 .homepage {
   background-image: url('../images/hexbackground.jpg');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
 }
@@ -41,6 +41,7 @@ hr {
     background-color: black;
     margin: 6px 0;
     border-radius: 2px;
+    z-index: 9999;
 }
 
 .menu {
@@ -48,7 +49,7 @@ hr {
   left: 10vh;
   position: fixed;
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999;
   float: left;
 }
 
@@ -59,7 +60,7 @@ hr {
 .nav li {
   float: left;
   margin: 15px;
-  z-index: 998;
+  z-index: 9999;
   font-weight: bold;
   list-style-type: none
 }
@@ -79,11 +80,12 @@ a.hover {
 
 .pageHeader {
   background color: white;
-  z-index: 999;
   top: 0;
   left: 0;
   position: fixed;
-  min-width: 100%
+  min-width: 100%;
+  opacity: 1;
+  z-index: 999;
 }
 
 
@@ -93,6 +95,7 @@ a.hover {
   position: fixed;
   right: 4vh;
   top: 9vh;
+  z-index: 9999;
 }
 
 
@@ -125,6 +128,7 @@ a.hover {
 
 .add-work {
   margin: 3vh auto;
+  width: 19%;
 }
 
 
@@ -421,10 +425,10 @@ body {
   position: relative;
 }
 .timeline-event:hover .timeline-event-icon {
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
   background-color: #2abbad;
 }
 .timeline-event:hover .timeline-event-thumbnail {
@@ -553,10 +557,25 @@ body {
   background-size: 50px 50px;
 }
 
-@media (min-height: 576px) {
+@media screen and (max-width: 576px) {
 
   .card {
-    margin-right: 50px;
+    margin-right: 40px;
+  }
+
+  nav {
+
+  }
+
+  .contact-links {
+    display:inline;
+    background-color: white;
+    opacity: 1;
+    z-index: 999
+  }
+
+  .add-work {
+    width: 65%
   }
 
 }

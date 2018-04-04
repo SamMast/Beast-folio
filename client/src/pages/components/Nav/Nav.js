@@ -25,8 +25,9 @@ class Nav extends Component {
           <div className="hamburger"></div>
         </div>
 
+        <div style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:998}}>. 
         {this.state.menuOpen ? (
-          <div className="nav">
+          <div className="nav" >
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
@@ -37,7 +38,7 @@ class Nav extends Component {
           </div>
           ) : (<div className="nav" />)
         }
-
+        </div>
 
         <div className="contact-links pulse">
           <a href="https://www.linkedin.com/in/sammast/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>

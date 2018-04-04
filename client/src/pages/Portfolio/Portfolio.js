@@ -74,7 +74,7 @@ class PortfolioItems extends Component {
   render() {
     return (
       <div className="portfolioPage" id="portfolio">
-        <div className="pageHeader">
+        <div className="pageHeader" style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:998}}>
           <hr />
           <h2 className="text-center">Portfolio</h2>
           <hr />
@@ -128,7 +128,7 @@ class PortfolioItems extends Component {
           </div>
         </div>
 
-          <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)",width:"19%"}}>
+          <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)"}}>
             <i className="fa fa-pencil addImage" style={{color:"#FFCC00"}}></i>
               <div className="">
                 <h4 className="">Admin Mode</h4>

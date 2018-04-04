@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Technologies = props => (
   <div id="techDiv">
-    <div className="pageHeader">
+    <div className="pageHeader" style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:998}}>
       <hr />
       <h2 className="text-center" >Technologies</h2>
       <hr />
