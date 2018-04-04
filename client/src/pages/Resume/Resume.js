@@ -12,7 +12,7 @@ const Resume = () => (
 	      <h2 className="text-center" >About Me</h2>
 	      <hr />
 	    </div>
-	  	<Nav  style={{backgroundColor:"white",opacity:1,zIndex:998}}/>
+	  	<Nav background="white"/>
 	  	<br />
 	  	<br />
 	  	<br />

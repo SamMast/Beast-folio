@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
-import "./Home.css";
 
 class Home extends Component {
 
   render() {
     return (
 		<div className="homepage">
-			<Nav />
+			<Nav background="transparent"/>
 
 			<div className="intro slideLeft">
 				<h1 className="header">

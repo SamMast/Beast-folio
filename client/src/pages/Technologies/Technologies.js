@@ -10,7 +10,7 @@ const Technologies = props => (
       <h2 className="text-center" >Technologies</h2>
       <hr />
     </div>
-    <Nav />
+    <Nav background="white"/>
     <br />
     <br />
     <br />

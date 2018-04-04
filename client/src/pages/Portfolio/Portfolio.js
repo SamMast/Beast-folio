@@ -79,7 +79,7 @@ class PortfolioItems extends Component {
           <h2 className="text-center">Portfolio</h2>
           <hr />
         </div>
-        <Nav />
+        <Nav background="white"/>
         <br />
         <div className="port container" id="port">
           {this.state.projects.length ? (

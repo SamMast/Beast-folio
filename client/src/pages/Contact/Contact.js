@@ -55,16 +55,16 @@ class Contact extends Component {
           <h2 className="text-center" >Contact Form</h2>
           <hr />
         </div>
-        <Nav />
+        <Nav background="white"/>
         <br />
         <br />
         <br />
         <div className="cont">
           <form className="col-md-6 contactForm fadeIn" style={{display:"block", margin:"auto"}}>
             <br />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione voluptatibus maiores, incidunt ad corporis id dolore est, vero ducimus animi nemo obcaecati nam sint dolores dignissimos doloremquem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione volupta.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aspernatur deleniti ratione voluptatibus maiores, incidunt ad corporis id dolore est, vero ducimus animi nemo obcaecati nam sint dolores dignissimos doloremque.</p>
+            <p className="text-center" style={{fontSize:"200%"}}><strong>Thank you for visiting Sam's Portfolio page!</strong></p>
+            <br/>
+            <p className="text-center">Please feel free to click the links to the right to access Sam's GitHub page, LinkedIn page, and send a direct email.  If you would like to contact Sam directly, please enter your information into the form below and send.  Sam will receive your message, and be in touch with you ASAP!</p>
             
             <br />
             
@@ -120,6 +120,7 @@ class Contact extends Component {
                   </div>
               </div>
             </div>
+            <br />
             <button 
               type="submit" 
               className="btn btn-default btn-lg" 
@@ -127,6 +128,7 @@ class Contact extends Component {
               onClick={this.handleFormSubmit}
               >Submit Form</button>
           </form>
+          <br />
           <br />
           <br />
           <br />

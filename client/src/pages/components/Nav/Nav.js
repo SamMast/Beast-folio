@@ -7,6 +7,7 @@ class Nav extends Component {
   };
 
   menuToggle = () => {
+    console.log(this.props.background);
 
     console.log("running");
     if (!this.state.menuOpen) {
@@ -15,6 +16,13 @@ class Nav extends Component {
       this.setState({ menuOpen: false })
     }
   };
+
+  style = {
+    width: "100%",
+    backgroundColor: this.props.background,
+    opacity: 1,
+    zIndex:997
+  }
 
   render() {
     return (
@@ -26,7 +34,7 @@ class Nav extends Component {
         </div>
 
         {this.state.menuOpen ? (
-          <div className="nav" style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:997}}>
+          <div className="nav" style={this.style}>
             <ul>
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
@@ -36,7 +44,7 @@ class Nav extends Component {
             </ul>
           </div>
           ) : (
-          <div className="nav" style={{width:"100%",backgroundColor:"white",opacity:1,zIndex:997}}>
+          <div className="nav" style={this.style}>
             <ul>
               <li style={{opacity:0}}><a href="/">Home</a></li>
               <li style={{opacity:0}}><a href="/about">About</a></li>
