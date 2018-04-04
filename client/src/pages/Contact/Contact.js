@@ -43,6 +43,9 @@ class Contact extends Component {
   
   };
 
+  log = () => {
+    console.log('working');
+  }
 
   render() {
     return (
