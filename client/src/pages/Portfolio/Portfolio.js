@@ -31,6 +31,14 @@ class PortfolioItems extends Component {
       .catch(err => console.log(err));
   };
 
+  scrollPortfolio = direction => {
+    if (direction === "left") {
+      document.getElementById("port").scrollBy(-330, 0);
+    } else if (direction === "right") {
+      document.getElementById("port").scrollBy(330, 0);
+    }
+
+  };
 
   //on click of the portfolio item open additional details
   getDetails = id => {
@@ -73,9 +81,9 @@ class PortfolioItems extends Component {
         </div>
         <Nav />
         <br />
-        <div className="port">
+        <div className="port container" id="port">
           {this.state.projects.length ? (
-            <div className="text-center card-deck fadeIn" >
+            <div className="text-center card-deck fadeIn" id="allProjects" >
               {this.state.projects.map(project => (
                 <div key={project._id} className="card mb-4 work" onClick={() => this.getDetails(project._id)}>
                     <div className="view overlay">
@@ -95,32 +103,41 @@ class PortfolioItems extends Component {
           ) : (
             <h4 className="text-center">Loading Projects...</h4>
           )}
-          <div className="text-center">
-            <img src="http://cdn.onlinewebfonts.com/svg/img_440772.png" alt="scroll for more" style={{display:"block",margin:"auto",height:"50px",width:"100px"}}/>
-            <br />
+        </div>
+
+
+        {(this.state.modal && !this.state.adminModal) ? (
+          <Modal close={this.modalToggle} edit={this.editProjects} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description} tech={this.state.technologies}/>
+          ) : (<div />)
+        }
+        {(!this.state.modal && this.state.adminModal) ? (
+          <AdminModal toggle={this.adminModalToggle}/>
+          ) : (<div />)
+        }
+
+
+        <div className="scrollButtons text-center">
+          <div style={{display:"inline",margin:"auto",fontSize:"50px" }}>
+            <span onClick={() => this.scrollPortfolio("left")}><i className="fa fa-angle-double-left" id="scrollLeft"></i></span>
+            <span className="middle"><i className="fa fa-circle" style={{color:"#ebebeb",opacity:.3}}></i></span>
+            <span onClick={() => this.scrollPortfolio("right")}><i className="fa fa-angle-double-right" id="scrollRight"></i></span>
+          </div>
+          <br />
+          <div>
             <em>scroll for more projects</em>
           </div>
-
-            <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)",width:"19%"}}>
-              <i className="fa fa-pencil addImage" style={{color:"#FFCC00"}}></i>
-                <div className="">
-                  <h4 className="">Admin Mode</h4>
-                  <p><em>Add/edit/delete projects</em></p>
-                </div>
-                <br />                
-            </div>
-
-          {(this.state.modal && !this.state.adminModal) ? (
-            <Modal close={this.modalToggle} edit={this.editProjects} status={this.state.modal} title={this.state.title} url={this.state.url} imageUrl={this.state.imageUrl} githubUrl={this.state.githubUrl} description={this.state.description} tech={this.state.technologies}/>
-            ) : (<div />)
-          }
-          {(!this.state.modal && this.state.adminModal) ? (
-            <AdminModal toggle={this.adminModalToggle}/>
-            ) : (<div />)
-          }
-          
-          <Footer />
         </div>
+
+          <div className="add-work text-center" onClick={() => this.editProjects()} style={{borderStyle:"thin",borderRadius:"5px",boxShadow:"0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)",width:"19%"}}>
+            <i className="fa fa-pencil addImage" style={{color:"#FFCC00"}}></i>
+              <div className="">
+                <h4 className="">Admin Mode</h4>
+                <p><em>Add/edit/delete projects</em></p>
+              </div>
+              <br />                
+          </div>
+        
+        <Footer />
       </div>
     );
   }

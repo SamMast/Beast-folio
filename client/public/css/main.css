@@ -91,7 +91,7 @@ a.hover {
   font-size: 225%;
   display:block;
   position: fixed;
-  right: 11vh;
+  right: 4vh;
   top: 9vh;
 }
 
@@ -127,14 +127,7 @@ a.hover {
   margin: 3vh auto;
 }
 
-.card-deck {
-  display: block;
-  height: 62vh;
-  width: 80%;
-  margin: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
+
 
 .links {
   font-size: 500%;
@@ -340,6 +333,25 @@ a.hover {
     width: 300px;
 }
 
+.card-deck {
+  display: block;
+  height: 62vh;
+  margin: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  min-width: 600vh;
+}
+
+.card {
+ white-space: normal;
+ max-width: 72vw;
+}
+
+.port {
+  max-width: 80%;
+  overflow-x: scroll;
+}
+
 .modalProjects {
   overflow-y: scroll;
   padding: 0 !important;
@@ -505,6 +517,24 @@ body {
   margin-top: 15vh;
 }
 
+.scrollButtons {
+  display: block;
+}
+
+.scroll {
+  display: block;
+  margin: auto;
+}
+
+.middle {
+  margin: 0 19px;
+}
+
+#scrollLeft:hover,
+#scrollRight:hover {
+  cursor: pointer;
+}
+
 #contact,
 #techDiv {
   min-height: 100vh;
@@ -522,3 +552,15 @@ body {
   background-image: linear-gradient(-135deg, transparent 50%, #2abbad 50%), linear-gradient(-45deg, #909090 50%, transparent 50%);
   background-size: 50px 50px;
 }
+
+@media (min-height: 576px) {
+
+  .card {
+    margin-right: 50px;
+  }
+
+}
+
+
+
+
